@@ -1,7 +1,7 @@
-# docker-fluentd-zabbix
+# docker-fluzabela
 
-## docker run
+## docker-run
 
 ```
-docker run -it -e ZABBIX_SERVER=192.168.1.1 -e ACTIVE_CHECK_PORT=10051 stake/docker-fluentd-zabbix
+docker run -d -e ZABBIX_SERVER=172.16.31.40 -e ACTIVE_CHECK_PORT=10051 -e ES_SERVER=172.16.31.40 -e ES_PORT=9200 -v /var/log/container/nginx:/var/log/nginx stake/docker-fluentd-container
 ```
