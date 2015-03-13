@@ -1,7 +1,6 @@
 FROM centos:centos6
 
 RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
-RUN localedef -f UTF-8 -i ja_JP ja_JP
 
 # Update base images.
 RUN yum distribution-synchronization -y

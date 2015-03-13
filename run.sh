@@ -13,4 +13,6 @@ if [ -f "$CONF" ]; then
     sed -i "s/__ES_PORT__/${ES_PORT}/" $CONF
 fi
 
+rm -f /var/log/td-agent/access.log.pos
+
 /usr/lib64/fluent/ruby/bin/ruby /usr/sbin/td-agent --group td-agent --log /var/log/td-agent/td-agent.log
