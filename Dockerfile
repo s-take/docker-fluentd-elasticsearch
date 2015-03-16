@@ -12,7 +12,7 @@ ADD ./td.repo /etc/yum.repos.d/td.repo
 RUN yum check-update && yum install -y td-agent
 
 # Setup fluentd-zabbix
-RUN /usr/lib64/fluent/ruby/bin/fluent-gem install fluent-plugin-zabbix fluent-plugin-elasticsearch --no-ri --no-rdoc
+RUN /usr/lib64/fluent/ruby/bin/fluent-gem install fluent-plugin-zabbix fluent-plugin-elasticsearch fluent-plugin-record-reformer --no-ri --no-rdoc
 RUN rpm -ivh http://repo.zabbix.com/zabbix/2.4/rhel/6/x86_64/zabbix-release-2.4-1.el6.noarch.rpm
 RUN yum install -y zabbix-agent zabbix-sender
 
